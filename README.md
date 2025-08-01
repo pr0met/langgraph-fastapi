@@ -12,7 +12,11 @@ uv pip sync requirements.txt
 
 ## Configuration
 
-1.  **Google API Key**: You need to set your Gemini API key directly in the [`graph.py`](./graph.py) file.
+1.  **Google API Key**: Add your Gemini API key to your environment variables.
+
+    ```bash
+    export GOOGLE_API_KEY="..."
+    ```
 
 2.  **LumApps Bearer Token**: Add your LumApps bearer token to your environment variables.
 

@@ -1,4 +1,5 @@
 import asyncio
+import os
 from uuid import uuid4
 
 from fastapi import FastAPI
@@ -40,6 +41,10 @@ AGENT_PRE_PROMPT = """
     - if the user input contains sufficient information, generate it
     - otherwise, ask a question to the user so they can give more info about it
 """
+
+
+if not os.environ.get("GOOGLE_API_KEY"):
+    raise ValueError("GOOGLE_API_KEY environment variable not set")
 
 
 @app.post("/stream")

@@ -11,9 +11,6 @@ from tools import get_content_types, get_content_type_templates, get_template_de
 
 # --- LangGraph Setup ---
 
-# API keys
-os.environ["GOOGLE_API_KEY"] = "..."
-
 # 1. Define the state for the graph
 class State(TypedDict):
     messages: Annotated[list, add_messages]
